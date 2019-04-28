@@ -1,0 +1,20 @@
+{
+  "name": "app_name",
+  "description": "app_description",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mizdra/app_name.git",
+  "author": "mizdra <pp.mizdra@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "check": "prettier -l 'src/**/*.{ts,tsx}'"
+  },
+  "devDependencies": {
+    "@types/node": "^11.13.8",
+    "prettier": "1.17.0",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  }
+}
