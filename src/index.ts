@@ -1,2 +1,2 @@
-console.log('hello world')
-const a = 1
+console.log('hello world');
+const a = 1;
