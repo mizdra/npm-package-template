@@ -3,7 +3,7 @@
   "exclude": ["node_modules"],
   "compilerOptions": {
     /* Basic Options */
-    // "outDir": "./dist",
+    "outDir": "./dist",
     "target": "esnext",
     "lib": ["esnext"],
     "declaration": false,
