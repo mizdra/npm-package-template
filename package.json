@@ -10,9 +10,9 @@
     "start": "node dist/index.js",
     "build": "tsc",
     "dev": "ts-node src/index.ts",
-    "check": "run-p -l -c 'check:tsc --pretty' check:prettier",
+    "check": "run-s check:*",
     "check:tsc": "tsc --noEmit",
-    "check:prettier": "prettier -l 'src/**/*.{ts,tsx}'"
+    "check:eslint": "eslint src"
   },
   "devDependencies": {
     "@mizdra/eslint-config-mizdra": "^0.7.0",
