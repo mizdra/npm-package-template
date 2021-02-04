@@ -1,3 +1,3 @@
 module.exports = {
-  ...require("@mizdra/prettier-config-mizdra"),
+  ...require('@mizdra/prettier-config-mizdra'),
 };

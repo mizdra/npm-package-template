@@ -12,4 +12,7 @@ module.exports = {
   env: {
     node: true,
   },
+  rules: {
+    'prettier/prettier': 0,
+  },
 };
