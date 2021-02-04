@@ -1,29 +1,37 @@
 {
-  "include": ["./src/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     /* Basic Options */
     "outDir": "./dist",
-    "target": "esnext",
-    "lib": ["esnext"],
-    "declaration": false,
-    // "jsx": "react",
+    "target": "ES2020", // Node.js v14 互換
+    "lib": ["ES2020"],
 
     /* Module Options */
-    "module": "es2015",
-    "moduleResolution": "node",
-    "esModuleInterop": true,
+    "module": "CommonJS", // ES Modules はまだハマりどころがあるので CommonJS を使う
+    "esModuleInterop": true, // CommonJS モジュールを `import _ from 'commonjs'` で import できるように
+    "resolveJsonModule": true, // import した json の型を推論するように
+    "moduleResolution": "node", // `node` にしないと `resolveJsonModule` が使えない
+    "forceConsistentCasingInFileNames": true, // 大文字小文字を区別しない環境 (win) でも unix と同じように区別する
 
-    /* Strict Type-Checking Options */
+    /* Output Options */
+    "sourceMap": true, // デバッグしやすいように / ライブラリとして publish された際に、ライブラリの利用側からスタックトレースが分かりやすくなるように
+    "declaration": true, // ライブラリとして publish された際に、ライブラリの利用側から型情報が見れるように
+    "declarationMap": true, // ライブラリとして publish された際に、ライブラリの利用側から VSCode の `実装へ移動` で *.ts へ直接 jump できるように
+
+    /* Additional Features */
+    "jsx": "react-jsxdev",
+
+    /* Type-Checking Options */
     "strict": true,
+    "noUncheckedIndexedAccess": true, // お試し
+    "skipLibCheck": true, // ライブラリの型定義の型チェックは、ライブラリが publish される前にされているはずなのでスキップする
 
-    /* Helper Options */
-    "noEmitHelpers": true,
-    "importHelpers": true,
+    /* Lint Options */
+    // "noUnusedLocals": false, // eslint の `@typescript-eslint/no-unused-vars` に任せる
+    // "noUnusedParameters": false, // eslint の `@typescript-eslint/no-unused-vars` に任せる
 
     /* Debug Options */
-    "sourceMap": true,
-    "pretty": true,
     "locale": "ja"
   }
 }
