@@ -2,12 +2,6 @@
   "extends": ["@tsconfig/strictest/tsconfig.json", "@tsconfig/node18/tsconfig.json", "@tsconfig/esm/tsconfig.json"],
   "exclude": ["node_modules", "dist", "bin"],
   "compilerOptions": {
-    /* Output Options */
-    "outDir": "./dist",
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
     /* Lint Options */
     "noUnusedLocals": false, // Delegate to @typescript-eslint/no-unused-vars in eslint
     "noUnusedParameters": false, // Delegate to @typescript-eslint/no-unused-vars in eslint
