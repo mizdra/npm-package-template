@@ -5,7 +5,7 @@
   "type": "module",
   "repository": "https://github.com/mizdra/app_name.git",
   "author": "mizdra <pp.mizdra@gmail.com>",
-  "license": "MIT",
+  "license": "CC0-1.0",
   "private": true,
   "exports": {
     ".": {

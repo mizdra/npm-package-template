@@ -27,7 +27,7 @@ npm run dev
 
 ## License
 
-MIT
+CC0-1.0
 
 # app_name
 
