@@ -1,13 +1,17 @@
 # ts-node-skeleton
 
-Boilerplate for ts-node.
+Node.js + TypeScript で npm-package を作るためのボイラープレート。
 
-## What's included
+## 技術スタック
 
-- ts-node
+- npm
 - TypeScript
+- ESM
 - Prettier
-- Recommended VSCode configuration
+- ESLint
+- renovate
+- GitHub Actions
+- vscode 向けの各種設定ファイル (`extensions.json`, `launch.json`, `settings.json`)
 
 ## Usage
 
@@ -16,8 +20,8 @@ cd app_name
 wget -O - https://github.com/mizdra/ts-node-skeleton/archive/master.tar.gz | tar xzvf - --strip=1
 
 ## Init project
-yarn install
-yarn dev
+npm install
+npm dev
 ```
 
 ## License
@@ -28,9 +32,6 @@ MIT
 
 app_description
 
-## How to dev
+## npm-scripts
 
-- `yarn run start`: Run for production
-- `yarn run build`: Build for production
-- `yarn run dev`: Run for development
-- `yarn run check`: Try static-checking
+- ref: https://www.mizdra.net/entry/2022/03/24/093000
