@@ -12,7 +12,7 @@
     "dev": "ts-node src/index.ts",
     "lint": "run-s -c lint:*",
     "lint:tsc": "tsc --noEmit",
-    "lint:eslint": "eslint src",
+    "lint:eslint": "eslint .",
     "lint:prettier": "prettier --lint ."
   },
   "prettier": "@mizdra/prettier-config-mizdra",
