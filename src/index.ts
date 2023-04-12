@@ -1,9 +1,6 @@
-// eslint-disable-next-line no-debugger
-debugger;
+import { add } from './math.js';
 
-console.log('hello world');
-
-const num = 1 + 2;
-console.log(num);
-
-export {};
+export function run() {
+  debugger;
+  console.log('hello world', add(1, 2));
+}
