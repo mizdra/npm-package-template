@@ -10,7 +10,7 @@
     "start": "node dist/index.js",
     "build": "tsc",
     "dev": "ts-node src/index.ts",
-    "lint": "run-s lint:*",
+    "lint": "run-s -c lint:*",
     "lint:tsc": "tsc --noEmit",
     "lint:eslint": "eslint src",
     "lint:prettier": "prettier --lint ."
