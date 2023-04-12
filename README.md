@@ -9,6 +9,7 @@ npm package を作るためのプロジェクトテンプレート。
 - ESM
 - Prettier
 - ESLint
+- Vitest
 - renovate
 - GitHub Actions
 - vscode 向けの各種設定ファイル (`extensions.json`, `launch.json`, `settings.json`)
@@ -17,11 +18,11 @@ npm package を作るためのプロジェクトテンプレート。
 
 ```bash
 cd app_name
-wget -O - https://github.com/mizdra/npm-package-template/archive/master.tar.gz | tar xzvf - --strip=1
+wget -O - https://github.com/mizdra/npm-package-template/archive/main.tar.gz | tar xzvf - --strip=1
 
 ## Init project
 npm install
-npm dev
+npm run dev
 ```
 
 ## License
@@ -34,4 +35,4 @@ app_description
 
 ## npm-scripts
 
-- ref: https://www.mizdra.net/entry/2022/03/24/093000
+[mizdra-style npm-scripts](https://www.mizdra.net/entry/2022/03/24/093000) です。
