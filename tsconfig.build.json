@@ -3,6 +3,7 @@
   "include": ["src/**/*"],
   "compilerOptions": {
     "outDir": "./dist",
+    "rootDir": "src", // To avoid inadvertently changing the directory structure under dist/.
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true
