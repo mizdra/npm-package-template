@@ -1,6 +1,6 @@
-# ts-node-skeleton
+# npm-package-template
 
-Node.js + TypeScript で npm-package を作るためのボイラープレート。
+npm package を作るためのプロジェクトテンプレート。
 
 ## 技術スタック
 
@@ -17,7 +17,7 @@ Node.js + TypeScript で npm-package を作るためのボイラープレート�
 
 ```bash
 cd app_name
-wget -O - https://github.com/mizdra/ts-node-skeleton/archive/master.tar.gz | tar xzvf - --strip=1
+wget -O - https://github.com/mizdra/npm-package-template/archive/master.tar.gz | tar xzvf - --strip=1
 
 ## Init project
 npm install
