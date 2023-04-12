@@ -10,20 +10,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-
-      - uses: actions/cache@v3
-        id: cache
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.OS }}-node-
-
-      - name: yarn install
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn install
-
-      - name: yarn run lint
-        run: yarn run lint
-
-      - name: yarn run build
-        run: yarn run build
+          cache: 'npm'
+      - run: npm install
+      - run: npm run lint
+      - run: npm run build
