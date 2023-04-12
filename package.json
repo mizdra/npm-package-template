@@ -15,6 +15,7 @@
     "check:eslint": "eslint src",
     "check:prettier": "prettier --check ."
   },
+  "prettier": "@mizdra/prettier-config-mizdra",
   "devDependencies": {
     "@mizdra/eslint-config-mizdra": "^0.7.0",
     "@mizdra/prettier-config-mizdra": "^0.3.0",
