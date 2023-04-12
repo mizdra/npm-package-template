@@ -19,6 +19,8 @@ npm package を作るためのプロジェクトテンプレート。
 ```bash
 cd app_name
 wget -O - https://github.com/mizdra/npm-package-template/archive/main.tar.gz | tar xzvf - --strip=1
+grep -l 'CC0-1.0' | xargs sed -i '' -e 's/CC0-1.0/MIT/g'
+license mit > LICENSE
 
 ## Init project
 npm install
