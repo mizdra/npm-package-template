@@ -1,11 +1,7 @@
 {
   "editor.tabSize": 2,
-  // ファイル保存時に prettier で format するように
-  // ref: https://github.com/hatena/eslint-config-hatena/blob/main/docs/integration.md#vscode
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  // ファイル保存時に eslint --fix するように
-  // NOTE: eslint は VSCode からは formatter として扱われない。
-  // そのため fixOnSave するには `editor.formatOnSave` ではなく `editor.codeActionsOnSave` を使う必要がある。
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   }
