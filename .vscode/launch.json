@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "name": "dev",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"]
+    }
+  ]
+}
