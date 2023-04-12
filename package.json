@@ -13,7 +13,7 @@
     "lint": "run-s -c lint:*",
     "lint:tsc": "tsc --noEmit",
     "lint:eslint": "eslint .",
-    "lint:prettier": "prettier --lint ."
+    "lint:prettier": "prettier --check ."
   },
   "prettier": "@mizdra/prettier-config-mizdra",
   "devDependencies": {
