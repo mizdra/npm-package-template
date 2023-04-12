@@ -7,7 +7,6 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node dist/index.js",
     "build": "tsc",
     "dev": "ts-node src/index.ts",
     "lint": "run-s -c lint:*",
