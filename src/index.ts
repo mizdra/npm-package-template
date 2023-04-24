@@ -8,5 +8,6 @@ export async function run() {
   await setTimeout(1000);
 
   // MEMO: ↓この行に breakpoint を仕掛けて、デバッグ実行してみよう。
+  // eslint-disable-next-line no-console
   console.log('hello world', add(1, 2));
 }
