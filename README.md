@@ -1,6 +1,6 @@
 # npm-package-template
 
-npm package を作るためのプロジェクトテンプレート。
+npm package を作るための @mizdra 専用プロジェクトテンプレート。
 
 ## 技術スタック
 
