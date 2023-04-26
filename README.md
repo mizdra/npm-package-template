@@ -1,36 +1,40 @@
-# ts-node-skeleton
+# npm-package-template
 
-Boilerplate for ts-node.
+npm package を作るための @mizdra 専用プロジェクトテンプレート。
 
-## What's included
+## 技術スタック
 
-- ts-node
+- npm
 - TypeScript
+- ESM
 - Prettier
-- Recommended VSCode configuration
+- ESLint
+- Vitest
+- renovate
+- GitHub Actions
+- vscode 向けの各種設定ファイル (`extensions.json`, `launch.json`, `settings.json`)
 
 ## Usage
 
 ```bash
 cd app_name
-wget -O - https://github.com/mizdra/ts-node-skeleton/archive/master.tar.gz | tar xzvf - --strip=1
+wget -O - https://github.com/mizdra/npm-package-template/archive/main.tar.gz | tar xzvf - --strip=1
+grep -l 'CC0-1.0' | xargs sed -i '' -e 's/CC0-1.0/MIT/g'
+license mit > LICENSE
 
 ## Init project
-yarn install
-yarn dev
+npm install
+npm run dev
 ```
 
 ## License
 
-MIT
+CC0-1.0
 
 # app_name
 
 app_description
 
-## How to dev
+## npm-scripts
 
-- `yarn run start`: Run for production
-- `yarn run build`: Build for production
-- `yarn run dev`: Run for development
-- `yarn run check`: Try static-checking
+[mizdra-style npm-scripts](https://www.mizdra.net/entry/2022/03/24/093000) です。
