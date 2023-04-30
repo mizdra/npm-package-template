@@ -19,7 +19,7 @@
     "build": "tsc -p tsconfig.build.json",
     "dev": "npm run build && node bin/example-command.js",
     "lint": "run-s -c lint:*",
-    "lint:tsc": "tsc --noEmit",
+    "lint:tsc": "tsc",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
     "test": "vitest"
