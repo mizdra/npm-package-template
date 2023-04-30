@@ -1,7 +1,7 @@
 /** @type {import('eslint').Linter.BaseConfig} */
 module.exports = {
   root: true,
-  extends: ['@mizdra/mizdra', '@mizdra/mizdra/+prettier'],
+  extends: ['@mizdra/mizdra', '@mizdra/mizdra/+node', '@mizdra/mizdra/+prettier'],
   parserOptions: {
     ecmaVersion: 2022,
   },
