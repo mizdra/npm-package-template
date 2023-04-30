@@ -34,7 +34,3 @@ CC0-1.0
 # app_name
 
 app_description
-
-## npm-scripts
-
-[mizdra-style npm-scripts](https://www.mizdra.net/entry/2022/03/24/093000) です。
