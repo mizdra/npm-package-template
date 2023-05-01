@@ -30,7 +30,3 @@ npm run dev
 ## License
 
 CC0-1.0
-
-# app_name
-
-app_description
