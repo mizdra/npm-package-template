@@ -3,6 +3,7 @@
   "description": "app_description",
   "version": "0.0.0",
   "type": "module",
+  "sideEffects": false,
   "repository": "https://github.com/mizdra/app_name.git",
   "author": "mizdra <pp.mizdra@gmail.com>",
   "license": "CC0-1.0",
