@@ -1,5 +1,5 @@
-name: 'Setup Node.js'
-description: 'The wrapper for actions/setup-node'
+name: 'Cache node_modules/.cache'
+description: 'The action to cache node_modules/.cache'
 
 inputs:
   cache-key-prefix:
