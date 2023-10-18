@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup-node
+      - uses: ./.github/actions/node-modules-cache
+        with:
+          cache-key-prefix: lint
       - run: npm install
       - run: npm run lint
   build:
@@ -19,6 +22,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup-node
+      - uses: ./.github/actions/node-modules-cache
+        with:
+          cache-key-prefix: build
       - run: npm install
       - run: npm run build
 
@@ -33,5 +39,8 @@ jobs:
       - uses: ./.github/actions/setup-node
         with:
           node-version: ${{ matrix.node }}
+      - uses: ./.github/actions/node-modules-cache
+        with:
+          cache-key-prefix: test
       - run: npm install
       - run: npm run test
