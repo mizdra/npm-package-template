@@ -11,30 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: ./.github/actions/setup-node
+      - uses: ./.github/actions/node-modules-cache
         with:
-          node-version: '18'
-          cache: 'npm'
-      - uses: actions/cache@v3
-        with:
-          path: node_modules/.cache
-          key: node-modules-cache-${{ runner.os }}
-          lookup-only: ${{ github.ref_name != 'main' }}
+          cache-key-prefix: lint
       - run: npm install
       - run: npm run lint
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: ./.github/actions/setup-node
+      - uses: ./.github/actions/node-modules-cache
         with:
-          node-version: '18'
-          cache: 'npm'
-      - uses: actions/cache@v3
-        with:
-          path: node_modules/.cache
-          key: node-modules-cache-${{ runner.os }}
-          lookup-only: ${{ github.ref_name != 'main' }}
+          cache-key-prefix: build
       - run: npm install
       - run: npm run build
 
@@ -46,14 +36,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: ./.github/actions/setup-node
         with:
           node-version: ${{ matrix.node }}
-          cache: 'npm'
-      - uses: actions/cache@v3
+      - uses: ./.github/actions/node-modules-cache
         with:
-          path: node_modules/.cache
-          key: node-modules-cache-${{ runner.os }}
-          lookup-only: ${{ github.ref_name != 'main' }}
+          cache-key-prefix: test
       - run: npm install
       - run: npm run test

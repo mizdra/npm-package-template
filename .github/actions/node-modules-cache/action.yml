@@ -1,0 +1,18 @@
+name: 'Cache node_modules/.cache'
+description: 'The action to cache node_modules/.cache'
+
+inputs:
+  cache-key-prefix:
+    required: true
+    description: 'The prefix of the cache key. Usually specifies the name of the job.'
+
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/cache@v3
+      with:
+        path: node_modules/.cache
+        # lint job では eslint/tsc/prettier、test job では vitest、というように job ごとに使われるツールが異なるため、
+        # job ごとに生成されるキャッシュも異なる。そのため、キャッシュのキーは cache-key-prefix で job ごとに分けるようにしてる。
+        key: ${{ inputs.cache-key-prefix }}-node-modules-${{ runner.os }}-${{ github.sha }}
+        restore-keys: ${{ inputs.cache-key-prefix }}-node-modules-${{ runner.os }}-
