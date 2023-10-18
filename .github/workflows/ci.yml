@@ -19,7 +19,7 @@ jobs:
         with:
           path: node_modules/.cache
           key: node-modules-cache-${{ runner.os }}
-          # lookup-only: ${{ github.ref_name != 'main' }}
+          lookup-only: ${{ github.ref_name != 'main' }}
       - run: npm install
       - run: npm run lint
   build:
@@ -34,7 +34,7 @@ jobs:
         with:
           path: node_modules/.cache
           key: node-modules-cache-${{ runner.os }}
-          # lookup-only: ${{ github.ref_name != 'main' }}
+          lookup-only: ${{ github.ref_name != 'main' }}
       - run: npm install
       - run: npm run build
 
@@ -54,6 +54,6 @@ jobs:
         with:
           path: node_modules/.cache
           key: node-modules-cache-${{ runner.os }}
-          # lookup-only: ${{ github.ref_name != 'main' }}
+          lookup-only: ${{ github.ref_name != 'main' }}
       - run: npm install
       - run: npm run test
