@@ -14,11 +14,5 @@ runs:
         path: node_modules/.cache
         # lint job では eslint/tsc/prettier、test job では vitest、というように job ごとに使われるツールが異なるため、
         # job ごとに生成されるキャッシュも異なる。そのため、キャッシュのキーは cache-key-prefix で job ごとに分けるようにしてる。
-        #
-        # また、同じ github.sha であっても、ブランチごとに生成されるキャッシュが異なることが一般にありうる。
-        # (例: develop ブランチでは development ビルド、main ブランチでは production ビルドをしていて、ビルド結果に差があり、ビルドのキャッシュも異なる。)
-        # そこで、github.ref_name もキャッシュのキーに含めている。
-        key: ${{ inputs.cache-key-prefix }}-node-modules-${{ runner.os }}-${{ github.ref_name }}-${{ github.sha }}
-        restore-keys: |
-          ${{ inputs.cache-key-prefix }}-node-modules-${{ runner.os }}-${{ github.ref_name }}
-          ${{ inputs.cache-key-prefix }}-node-modules-${{ runner.os }}
+        key: ${{ inputs.cache-key-prefix }}-node-modules-${{ runner.os }}-${{ github.sha }}
+        restore-keys: ${{ inputs.cache-key-prefix }}-node-modules-${{ runner.os }}-
