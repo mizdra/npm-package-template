@@ -15,11 +15,11 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-      # - uses: actions/cache@v3
-      #   with:
-      #     path: node_modules/.cache
-      #     key: node-modules-cache-${{ runner.os }}
-      #     # lookup-only: ${{ github.ref_name != 'main' }}
+      - uses: actions/cache@v3
+        with:
+          path: node_modules/.cache
+          key: node-modules-cache-${{ runner.os }}
+          # lookup-only: ${{ github.ref_name != 'main' }}
       - run: npm install
       - run: npm run lint
   build:
@@ -30,11 +30,11 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-      # - uses: actions/cache@v3
-      #   with:
-      #     path: node_modules/.cache
-      #     key: node-modules-cache-${{ runner.os }}
-      #     # lookup-only: ${{ github.ref_name != 'main' }}
+      - uses: actions/cache@v3
+        with:
+          path: node_modules/.cache
+          key: node-modules-cache-${{ runner.os }}
+          # lookup-only: ${{ github.ref_name != 'main' }}
       - run: npm install
       - run: npm run build
 
@@ -50,10 +50,10 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: 'npm'
-      # - uses: actions/cache@v3
-      #   with:
-      #     path: node_modules/.cache
-      #     key: node-modules-cache-${{ runner.os }}
-      #     # lookup-only: ${{ github.ref_name != 'main' }}
+      - uses: actions/cache@v3
+        with:
+          path: node_modules/.cache
+          key: node-modules-cache-${{ runner.os }}
+          # lookup-only: ${{ github.ref_name != 'main' }}
       - run: npm install
       - run: npm run test
