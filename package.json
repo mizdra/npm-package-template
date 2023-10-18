@@ -21,7 +21,7 @@
     "dev": "npm run build && node bin/example-command.js",
     "lint": "run-s -c lint:*",
     "lint:tsc": "tsc",
-    "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint --cache-strategy content .",
+    "lint:eslint": "eslint --cache --cache-location node_modules/.cache/eslint/ --cache-strategy content .",
     "lint:prettier": "prettier --cache --check .",
     "test": "vitest"
   },
