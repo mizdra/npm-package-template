@@ -8,6 +8,5 @@
   "typescript.preferences.importModuleSpecifier": "relative",
   "javascript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.importModuleSpecifierEnding": "js",
-  "javascript.preferences.importModuleSpecifierEnding": "js",
-  "vitest.commandLine": "npm run test --"
+  "javascript.preferences.importModuleSpecifierEnding": "js"
 }
