@@ -15,6 +15,9 @@ changelog:
     - title: Removed
       labels:
         - 'Type: Remove'
+    - title: Dependencies
+      labels:
+        - 'Type: Dependencies'
     - title: Security
       labels:
         - 'Type: Security'
