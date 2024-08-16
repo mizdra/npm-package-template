@@ -11,7 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/setup-node
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 22
+          cache: 'npm'
       - uses: ./.github/actions/node-modules-cache
         with:
           cache-key-prefix: lint
@@ -21,13 +24,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/setup-node
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 22
+          cache: 'npm'
       - uses: ./.github/actions/node-modules-cache
         with:
           cache-key-prefix: build
       - run: npm install
       - run: npm run build
-
   test:
     strategy:
       fail-fast: false
@@ -36,9 +41,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/setup-node
+      - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
+          cache: 'npm'
       - uses: ./.github/actions/node-modules-cache
         with:
           cache-key-prefix: test
