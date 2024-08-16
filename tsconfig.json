@@ -6,7 +6,6 @@
     "moduleResolution": "node16",
     "noEmit": true,
     "incremental": true,
-    "tsBuildInfoFile": "node_modules/.cache/typescript/.tsbuildinfo",
     /* Lint Options */
     "noUnusedLocals": false, // Delegate to @typescript-eslint/no-unused-vars in eslint
     "noUnusedParameters": false // Delegate to @typescript-eslint/no-unused-vars in eslint

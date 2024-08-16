@@ -11,7 +11,11 @@ runs:
   steps:
     - uses: actions/cache@v3
       with:
-        path: node_modules/.cache
+        path: |
+          node_modules/.cache/prettier/.prettier-cache
+          node_modules/.vite/vitest
+          .tsconfig.tsbuildinfo
+          .eslintcache
         # lint job では eslint/tsc/prettier、test job では vitest、というように job ごとに使われるツールが異なるため、
         # job ごとに生成されるキャッシュも異なる。そのため、キャッシュのキーは cache-key-prefix で job ごとに分けるようにしてる。
         key: ${{ inputs.cache-key-prefix }}-node-modules-${{ runner.os }}-${{ github.sha }}
