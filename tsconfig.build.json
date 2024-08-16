@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src/**/*"],
+  "include": ["src"], // Avoid bin/ and configuration files.
+  "exclude": ["src/**/*.test.ts", "src/**/__snapshots__", "src/test"],
   "compilerOptions": {
     "noEmit": false,
     "outDir": "./dist",
