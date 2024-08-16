@@ -10,12 +10,12 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: 'npm'
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: |
             node_modules/.cache/prettier/.prettier-cache
@@ -28,8 +28,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: 'npm'
@@ -42,12 +42,12 @@ jobs:
         node: [18, 20, 22]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
           cache: 'npm'
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: node_modules/.vite/vitest
           key: toolcache-test-${{ runner.os }}-node${{ matrix.node }}-${{ github.sha }}
