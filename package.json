@@ -10,7 +10,7 @@
   "private": true,
   "exports": {
     ".": {
-      "import": {
+      "default": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
       }
