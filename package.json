@@ -27,7 +27,7 @@
   },
   "prettier": "@mizdra/prettier-config-mizdra",
   "devDependencies": {
-    "@mizdra/eslint-config-mizdra": "^6.0.0",
+    "@mizdra/eslint-config-mizdra": "^6.1.0",
     "@mizdra/prettier-config-mizdra": "^2.0.0",
     "@types/node": "^22.13.9",
     "eslint": "^9.21.0",
