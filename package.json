@@ -27,15 +27,14 @@
   },
   "prettier": "@mizdra/prettier-config-mizdra",
   "devDependencies": {
-    "@mizdra/eslint-config-mizdra": "^4.0.1",
-    "@mizdra/prettier-config-mizdra": "^1.0.0",
-    "@types/eslint": "^8.37.0",
-    "@types/node": "^18.15.11",
-    "eslint": "^8.38.0",
-    "npm-run-all2": "^6.2.2",
-    "prettier": "^3.3.3",
-    "typescript": "^5.5.4",
-    "vitest": "^2.0.5"
+    "@mizdra/eslint-config-mizdra": "^6.0.0",
+    "@mizdra/prettier-config-mizdra": "^2.0.0",
+    "@types/node": "^22.13.9",
+    "eslint": "^9.21.0",
+    "npm-run-all2": "^7.0.2",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7"
   },
   "engines": {
     "node": ">=18.0.0"
