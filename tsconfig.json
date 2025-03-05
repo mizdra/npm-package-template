@@ -1,11 +1,12 @@
 {
   "extends": "./tsconfig.base.json",
-  "exclude": ["node_modules", "**/dist", "bin"],
+  "exclude": ["node_modules", "**/dist"],
   "compilerOptions": {
     "target": "ES2022",
     "lib": ["ESNext"],
     "module": "NodeNext",
 
     "noEmit": true
-  }
+  },
+  "references": [{ "path": "./tsconfig.build.json" }]
 }

@@ -19,7 +19,8 @@ jobs:
         with:
           path: |
             node_modules/.cache/prettier/.prettier-cache
-            .tsconfig.tsbuildinfo
+            tsconfig.build.tsbuildinfo
+            tsconfig.tsbuildinfo
             .eslintcache
           key: toolcache-lint-${{ runner.os }}-${{ github.sha }}
           restore-keys: toolcache-lint-${{ runner.os }}

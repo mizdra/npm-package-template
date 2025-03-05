@@ -17,10 +17,10 @@
     }
   },
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsc -b tsconfig.build.json",
     "dev": "npm run build && node bin/example-command.js",
     "lint": "run-s -c lint:*",
-    "lint:tsc": "tsc",
+    "lint:tsc": "tsc -b",
     "lint:eslint": "eslint --cache --cache-strategy content .",
     "lint:prettier": "prettier --cache --check .",
     "test": "vitest"
