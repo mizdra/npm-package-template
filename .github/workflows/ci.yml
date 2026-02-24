@@ -15,14 +15,6 @@ jobs:
         with:
           node-version: 22
           cache: 'npm'
-      - uses: actions/cache@v4
-        with:
-          path: |
-            node_modules/.cache/prettier/.prettier-cache
-            tsconfig.build.tsbuildinfo
-            tsconfig.tsbuildinfo
-          key: toolcache-lint-${{ runner.os }}-${{ github.sha }}
-          restore-keys: toolcache-lint-${{ runner.os }}
       - run: npm install
       - run: npm run lint
   build:

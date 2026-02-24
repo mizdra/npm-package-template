@@ -7,8 +7,8 @@ npm package を作るための @mizdra 専用プロジェクトテンプレー�
 - npm
 - TypeScript
 - ESM
-- Prettier
-- ESLint
+- Oxfmt
+- Oxlint
 - Vitest
 - GitHub Actions
 - vscode 向けの各種設定ファイル (`extensions.json`, `launch.json`, `settings.json`)
