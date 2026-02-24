@@ -18,7 +18,7 @@ npm package template for @mizdra
 - Create a repository from https://github.com/new?template_name=npm-package-template&template_owner=mizdra
 - Clone the created repository
 
-### Repository Configuration
+## Repository Configuration
 
 Perform the following configuration after cloning the repository:
 
