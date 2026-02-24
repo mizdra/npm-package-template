@@ -1,13 +1,25 @@
 {
   "name": "app_name",
-  "description": "app_description",
   "version": "0.0.0",
+  "private": true,
+  "description": "app_description",
+  "keywords": [],
+  "license": "CC0-1.0",
+  "author": "mizdra <pp.mizdra@gmail.com>",
+  "repository": "https://github.com/mizdra/app_name.git",
+  "bin": {
+    "example-command": "bin/example-command.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "!src/**/*.test.ts",
+    "!src/**/__snapshots__",
+    "!src/test",
+    "dist"
+  ],
   "type": "module",
   "sideEffects": false,
-  "repository": "https://github.com/mizdra/app_name.git",
-  "author": "mizdra <pp.mizdra@gmail.com>",
-  "license": "CC0-1.0",
-  "private": true,
   "exports": {
     ".": {
       "default": {
@@ -15,6 +27,10 @@
         "default": "./dist/index.js"
       }
     }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "build": "tsc -b tsconfig.build.json",
@@ -39,21 +55,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
-  "bin": {
-    "example-command": "bin/example-command.js"
-  },
-  "keywords": [],
-  "files": [
-    "bin",
-    "src",
-    "!src/**/*.test.ts",
-    "!src/**/__snapshots__",
-    "!src/test",
-    "dist"
-  ]
+  }
 }

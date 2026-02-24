@@ -21,6 +21,7 @@ This is a guide for contributors.
 - ```bash
   npm version <major|minor|patch>
   ```
+
   - If you want to release a pre-release version, use the following command instead:
     ```bash
     npm version <premajor|preminor|prepatch> --preid=<alpha|beta>
@@ -29,13 +30,16 @@ This is a guide for contributors.
     ```bash
     npm version prerelease
     ```
+
 - ```bash
   npm publish
   ```
+
   - If you want to publish a pre-release version, use the following command instead:
     ```bash
     npm publish --tag=<alpha|beta>
     ```
+
 - ```bash
   git push --follow-tags
   ```
