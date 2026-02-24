@@ -2,7 +2,7 @@
   "extends": "./tsconfig.base.json",
   "exclude": ["node_modules", "**/dist"],
   "compilerOptions": {
-    "target": "ES2022",
+    "target": "ES2023",
     "lib": ["ESNext"],
     "module": "NodeNext",
 

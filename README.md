@@ -1,29 +1,50 @@
 # npm-package-template
 
-npm package を作るための @mizdra 専用プロジェクトテンプレート。
+npm package template for @mizdra
 
-## 技術スタック
+## Tech Stack
 
 - npm
 - TypeScript
 - ESM
-- Prettier
-- ESLint
+- Oxfmt
+- Oxlint
 - Vitest
 - GitHub Actions
-- vscode 向けの各種設定ファイル (`extensions.json`, `launch.json`, `settings.json`)
+- VSCode configuration files (`extensions.json`, `launch.json`, `settings.json`)
 
 ## Usage
 
-```bash
-cd app_name
-wget -O - https://github.com/mizdra/npm-package-template/archive/main.tar.gz | tar xzvf - --strip=1
-grep -l 'CC0-1.0' | xargs sed -i '' -e 's/CC0-1.0/MIT/g'
-license mit > LICENSE
+- Create a repository from https://github.com/new?template_name=npm-package-template&template_owner=mizdra
+- Clone the created repository
 
-## Init project
-npm install
-npm run dev
+### Repository Configuration
+
+Perform the following configuration after cloning the repository:
+
+```bash
+OWNER=$(gh repo view --json owner -q .owner.login)
+REPO=$(gh repo view --json name  -q .name)
+# Setup labels
+GITHUB_TOKEN=$(gh auth token) npx github-label-setup --labels @mizdra/github-label-presets
+# Setup common repository settings
+gh repo edit \
+  --delete-branch-on-merge \
+  --enable-auto-merge \
+  --enable-discussions=false \
+  --enable-projects=false \
+  --enable-secret-scanning \
+  --enable-secret-scanning-push-protection \
+  --enable-wiki=false
+# Enable Code scanning
+gh api -X PATCH /repos/$OWNER/$REPO/code-scanning/default-setup -f state=configured
+# Enable immutable releases
+gh api -X PUT /repos/$OWNER/$REPO/immutable-releases
+# Setup rulesets
+DEFAULT_BRANCH_PROTECTION=$(gh api /repos/mizdra/npm-package-template/rulesets/13184851)
+VERSION_TAG_PROTECTION=$(gh api /repos/mizdra/npm-package-template/rulesets/13184887)
+gh api -X POST /repos/$OWNER/$REPO/rulesets --input - <<< $DEFAULT_BRANCH_PROTECTION
+gh api -X POST /repos/$OWNER/$REPO/rulesets --input - <<< $VERSION_TAG_PROTECTION
 ```
 
 ## License
