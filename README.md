@@ -1,8 +1,8 @@
 # npm-package-template
 
-npm package を作るための @mizdra 専用プロジェクトテンプレート。
+npm package template for @mizdra
 
-## 技術スタック
+## Tech Stack
 
 - npm
 - TypeScript
@@ -11,20 +11,13 @@ npm package を作るための @mizdra 専用プロジェクトテンプレー�
 - Oxlint
 - Vitest
 - GitHub Actions
-- vscode 向けの各種設定ファイル (`extensions.json`, `launch.json`, `settings.json`)
+- VSCode configuration files (`extensions.json`, `launch.json`, `settings.json`)
 
 ## Usage
 
-```bash
-cd app_name
-wget -O - https://github.com/mizdra/npm-package-template/archive/main.tar.gz | tar xzvf - --strip=1
-grep -l 'CC0-1.0' | xargs sed -i '' -e 's/CC0-1.0/MIT/g'
-license mit > LICENSE
-
-## Init project
-npm install
-npm run dev
-```
+- Create a repository from https://github.com/new?template_name=npm-package-template&template_owner=mizdra
+- Clone the created repository
+- Run `npm i && npm run dev`
 
 ## License
 
