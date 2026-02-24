@@ -6,7 +6,10 @@
   "keywords": [],
   "license": "CC0-1.0",
   "author": "mizdra <pp.mizdra@gmail.com>",
-  "repository": "https://github.com/mizdra/app_name.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mizdra/app_name.git"
+  },
   "bin": {
     "example-command": "bin/example-command.js"
   },
