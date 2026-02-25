@@ -22,7 +22,6 @@
     "dist"
   ],
   "type": "module",
-  "sideEffects": false,
   "exports": {
     ".": {
       "default": {
