@@ -22,7 +22,6 @@
     "dist"
   ],
   "type": "module",
-  "sideEffects": false,
   "exports": {
     ".": {
       "default": {
@@ -30,10 +29,6 @@
         "default": "./dist/index.js"
       }
     }
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "build": "tsc -b tsconfig.build.json",
