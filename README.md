@@ -29,7 +29,11 @@ REPO=$(gh repo view --json name  -q .name)
 gh repo license view mit | sed "s/\[year\]/$(date +%Y)/;s/\[fullname\]/mizdra/" > LICENSE
 npm pkg set license=MIT && npm i
 # Setup labels
-GITHUB_TOKEN=$(gh auth token) npx github-label-setup --labels @mizdra/github-label-presets
+GITHUB_TOKEN=$(gh auth token) npx \
+  -p @azu/github-label-setup \
+  -p @mizdra/github-label-presets \
+  github-label-setup \
+  --labels @mizdra/github-label-presets
 # Setup common repository settings
 gh repo edit \
   --delete-branch-on-merge \
