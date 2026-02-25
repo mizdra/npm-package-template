@@ -30,10 +30,6 @@
       }
     }
   },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "scripts": {
     "build": "tsc -b tsconfig.build.json",
     "dev": "npm run build && node bin/example-command.js",
