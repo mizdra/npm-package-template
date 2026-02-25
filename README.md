@@ -45,6 +45,8 @@ DEFAULT_BRANCH_PROTECTION=$(gh api /repos/mizdra/npm-package-template/rulesets/1
 VERSION_TAG_PROTECTION=$(gh api /repos/mizdra/npm-package-template/rulesets/13184887)
 gh api -X POST /repos/$OWNER/$REPO/rulesets --input - <<< $DEFAULT_BRANCH_PROTECTION
 gh api -X POST /repos/$OWNER/$REPO/rulesets --input - <<< $VERSION_TAG_PROTECTION
+# Require actions to be pinned to a full-length commit SHA
+gh api -X PUT /repos/$OWNER/$REPO/actions/permissions -F enabled=true -F sha_pinning_required=true
 ```
 
 ## License
