@@ -25,6 +25,9 @@ Perform the following configuration after cloning the repository:
 ```bash
 OWNER=$(gh repo view --json owner -q .owner.login)
 REPO=$(gh repo view --json name  -q .name)
+# Change license
+gh repo license view mit | sed "s/\[year\]/$(date +%Y)/;s/\[fullname\]/mizdra/" > LICENSE
+npm pkg set license=MIT && npm i
 # Setup labels
 GITHUB_TOKEN=$(gh auth token) npx github-label-setup --labels @mizdra/github-label-presets
 # Setup common repository settings
