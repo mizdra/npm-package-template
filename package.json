@@ -46,6 +46,7 @@
     "test": "vitest"
   },
   "devDependencies": {
+    "@mizdra/oxfmt-config": "^0.2.0",
     "@mizdra/oxlint-config": "^0.2.0",
     "@types/node": "^25.5.0",
     "npm-run-all2": "^8.0.4",
