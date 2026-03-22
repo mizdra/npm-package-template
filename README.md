@@ -43,12 +43,14 @@ gh repo edit \
   --enable-secret-scanning \
   --enable-secret-scanning-push-protection \
   --enable-wiki=false
-# Enable Code scanning
+# Enable private vulnerability reporting
+gh api -X PUT /repos/$OWNER/$REPO/private-vulnerability-reporting
+# Enable code scanning
 gh api -X PATCH /repos/$OWNER/$REPO/code-scanning/default-setup -f state=configured
 # Enable immutable releases
 gh api -X PUT /repos/$OWNER/$REPO/immutable-releases
 # Setup rulesets
-DEFAULT_BRANCH_PROTECTION=$(gh api /repos/mizdra/npm-package-template/rulesets/13184851)
+DEFAULT_BRANCH_PROTECTION=$(gh api /repos/mizdra/npm-package-template/rulesets/13904297)
 VERSION_TAG_PROTECTION=$(gh api /repos/mizdra/npm-package-template/rulesets/13184887)
 gh api -X POST /repos/$OWNER/$REPO/rulesets --input - <<< $DEFAULT_BRANCH_PROTECTION
 gh api -X POST /repos/$OWNER/$REPO/rulesets --input - <<< $VERSION_TAG_PROTECTION
