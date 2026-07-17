@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 24
           cache: 'pnpm'
-      - run: pnpm install
+      - run: pnpm ci
       - run: pnpm run lint
   build:
     runs-on: ubuntu-latest
@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 24
           cache: 'pnpm'
-      - run: pnpm install
+      - run: pnpm ci
       - run: pnpm run build
   test:
     strategy:
@@ -46,5 +46,5 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: 'pnpm'
-      - run: pnpm install
+      - run: pnpm ci
       - run: pnpm run test
