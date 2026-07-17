@@ -14,20 +14,16 @@ pnpm run build
 pnpm run dev
 
 # Unit tests
-pnpm run test
+vp test
 
 # Run a single test file
-pnpm vitest src/foo.test.ts
+vp test src/foo.test.ts
 
-# All lint checks
-pnpm run lint
+# Format, lint, and type checks
+vp check
 
-# Individual lint checks
-pnpm run lint:oxfmt  # Oxfmt
-pnpm run lint:oxlint # Oxlint (with type-check)
-
-# Auto-fix all fixable lint errors
-pnpm run lint-fix
+# Auto-fix all fixable format and lint errors
+vp check --fix
 ```
 
 ## Architecture

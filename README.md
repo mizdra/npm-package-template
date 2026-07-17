@@ -7,9 +7,7 @@ npm package template for @mizdra
 - pnpm
 - TypeScript
 - ESM
-- Oxfmt
-- Oxlint
-- Vitest
+- Vite+ (Oxfmt / Oxlint / Vitest)
 - GitHub Actions
 - VSCode configuration files (`extensions.json`, `launch.json`, `settings.json`)
 

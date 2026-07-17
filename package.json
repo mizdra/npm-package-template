@@ -38,23 +38,22 @@
     "build": "tsc -b tsconfig.build.json",
     "dev": "pnpm run build && node bin/example-command.js",
     "lint": "run-s -c lint:*",
-    "lint:oxfmt": "oxfmt --check",
-    "lint:oxlint": "oxlint --type-aware --type-check",
+    "lint:oxfmt": "vp fmt --check",
+    "lint:oxlint": "vp lint --type-aware --type-check",
     "lint-fix": "run-s -c lint-fix:*",
-    "lint-fix:oxfmt": "oxfmt --write",
+    "lint-fix:oxfmt": "vp fmt --write",
     "lint-fix:oxlint": "pnpm run lint:oxlint --fix",
-    "test": "vitest"
+    "test": "vp test",
+    "prepare": "vp config"
   },
   "devDependencies": {
     "@mizdra/oxfmt-config": "^0.2.0",
     "@mizdra/oxlint-config": "^0.5.0",
     "@types/node": "^26.1.1",
     "npm-run-all2": "^9.0.2",
-    "oxfmt": "^0.59.0",
-    "oxlint": "^1.74.0",
-    "oxlint-tsgolint": "^0.24.0",
     "typescript": "^7.0.2",
-    "vitest": "^4.1.10"
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
   },
   "devEngines": {
     "packageManager": {
