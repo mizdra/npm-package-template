@@ -10,28 +10,24 @@ permissions:
   contents: read
 
 jobs:
-  lint:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
-      - uses: pnpm/action-setup@008330803749db0355799c700092d9a85fd074e9 # v6.0.9
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      - uses: voidzero-dev/setup-vp@250f29ce396baf5e8f24498e17c0dfdebabc26eb # v1.15.0
         with:
           node-version: 24
-          cache: 'pnpm'
-      - run: pnpm ci
-      - run: pnpm run lint
+          cache: true
+      - run: vp run check
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
-      - uses: pnpm/action-setup@008330803749db0355799c700092d9a85fd074e9 # v6.0.9
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      - uses: voidzero-dev/setup-vp@250f29ce396baf5e8f24498e17c0dfdebabc26eb # v1.15.0
         with:
           node-version: 24
-          cache: 'pnpm'
-      - run: pnpm ci
-      - run: pnpm run build
+          cache: true
+      - run: vp run build
   test:
     strategy:
       fail-fast: false
@@ -41,10 +37,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
-      - uses: pnpm/action-setup@008330803749db0355799c700092d9a85fd074e9 # v6.0.9
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      - uses: voidzero-dev/setup-vp@250f29ce396baf5e8f24498e17c0dfdebabc26eb # v1.15.0
         with:
           node-version: ${{ matrix.node }}
-          cache: 'pnpm'
-      - run: pnpm ci
-      - run: pnpm run test
+          cache: true
+      - run: vp run test

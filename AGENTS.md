@@ -8,10 +8,10 @@
 
 ```bash
 # Build (TypeScript → dist/)
-pnpm run build
+vp run build
 
 # Development (build + run command)
-pnpm run dev
+vp run dev
 
 # Unit tests
 vp test

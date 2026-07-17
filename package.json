@@ -36,21 +36,15 @@
   },
   "scripts": {
     "build": "tsc -b tsconfig.build.json",
-    "dev": "pnpm run build && node bin/example-command.js",
-    "lint": "run-s -c lint:*",
-    "lint:oxfmt": "vp fmt --check",
-    "lint:oxlint": "vp lint --type-aware --type-check",
-    "lint-fix": "run-s -c lint-fix:*",
-    "lint-fix:oxfmt": "vp fmt --write",
-    "lint-fix:oxlint": "pnpm run lint:oxlint --fix",
-    "test": "vp test",
-    "prepare": "vp config"
+    "check": "vp check",
+    "dev": "vp run build && node bin/example-command.js",
+    "prepare": "vp config",
+    "test": "vp test"
   },
   "devDependencies": {
     "@mizdra/oxfmt-config": "^0.2.0",
     "@mizdra/oxlint-config": "^0.5.0",
     "@types/node": "^26.1.1",
-    "npm-run-all2": "^9.0.2",
     "typescript": "^7.0.2",
     "vite": "catalog:",
     "vite-plus": "catalog:"
