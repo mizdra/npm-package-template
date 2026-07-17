@@ -8,26 +8,26 @@
 
 ```bash
 # Build (TypeScript → dist/)
-npm run build
+pnpm run build
 
 # Development (build + run command)
-npm run dev
+pnpm run dev
 
 # Unit tests
-npm run test
+pnpm run test
 
 # Run a single test file
-npx vitest src/foo.test.ts
+pnpm vitest src/foo.test.ts
 
 # All lint checks
-npm run lint
+pnpm run lint
 
 # Individual lint checks
-npm run lint:oxfmt  # Oxfmt
-npm run lint:oxlint # Oxlint (with type-check)
+pnpm run lint:oxfmt  # Oxfmt
+pnpm run lint:oxlint # Oxlint (with type-check)
 
 # Auto-fix all fixable lint errors
-npm run lint-fix
+pnpm run lint-fix
 ```
 
 ## Architecture

@@ -4,7 +4,7 @@ npm package template for @mizdra
 
 ## Tech Stack
 
-- npm
+- pnpm
 - TypeScript
 - ESM
 - Oxfmt
@@ -27,7 +27,7 @@ OWNER=$(gh repo view --json owner -q .owner.login)
 REPO=$(gh repo view --json name  -q .name)
 # Change license
 gh repo license view mit | sed "s/\[year\]/$(date +%Y)/;s/\[fullname\]/mizdra/" > LICENSE
-npm pkg set license=MIT && npm i
+npm pkg set license=MIT && pnpm i
 # Setup labels
 GITHUB_TOKEN=$(gh auth token) npx \
   -p @azu/github-label-setup \

@@ -36,13 +36,13 @@
   },
   "scripts": {
     "build": "tsc -b tsconfig.build.json",
-    "dev": "npm run build && node bin/example-command.js",
+    "dev": "pnpm run build && node bin/example-command.js",
     "lint": "run-s -c lint:*",
     "lint:oxfmt": "oxfmt --check",
     "lint:oxlint": "oxlint --type-aware --type-check",
     "lint-fix": "run-s -c lint-fix:*",
     "lint-fix:oxfmt": "oxfmt --write",
-    "lint-fix:oxlint": "npm run lint:oxlint -- --fix",
+    "lint-fix:oxlint": "pnpm run lint:oxlint --fix",
     "test": "vitest"
   },
   "devDependencies": {
