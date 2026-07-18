@@ -36,25 +36,25 @@
   },
   "scripts": {
     "build": "tsc -b tsconfig.build.json",
-    "dev": "npm run build && node bin/example-command.js",
-    "lint": "run-s -c lint:*",
-    "lint:oxfmt": "oxfmt --check",
-    "lint:oxlint": "oxlint --type-aware --type-check",
-    "lint-fix": "run-s -c lint-fix:*",
-    "lint-fix:oxfmt": "oxfmt --write",
-    "lint-fix:oxlint": "npm run lint:oxlint -- --fix",
-    "test": "vitest"
+    "check": "vp check",
+    "dev": "vp run build && node bin/example-command.js",
+    "prepare": "vp config",
+    "test": "vp test"
   },
   "devDependencies": {
     "@mizdra/oxfmt-config": "^0.2.0",
-    "@mizdra/oxlint-config": "^0.3.0",
-    "@types/node": "^25.5.0",
-    "npm-run-all2": "^8.0.4",
-    "oxfmt": "^0.41.0",
-    "oxlint": "^1.56.0",
-    "oxlint-tsgolint": "^0.17.1",
-    "typescript": "^5.9.3",
-    "vitest": "^4.1.0"
+    "@mizdra/oxlint-config": "^0.5.0",
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2",
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.13.0",
+      "onFail": "warn"
+    }
   },
   "engines": {
     "node": ">=22.22.0"

@@ -4,12 +4,10 @@ npm package template for @mizdra
 
 ## Tech Stack
 
-- npm
+- pnpm
 - TypeScript
 - ESM
-- Oxfmt
-- Oxlint
-- Vitest
+- Vite+ (Oxfmt / Oxlint / Vitest)
 - GitHub Actions
 - VSCode configuration files (`extensions.json`, `launch.json`, `settings.json`)
 
@@ -27,7 +25,7 @@ OWNER=$(gh repo view --json owner -q .owner.login)
 REPO=$(gh repo view --json name  -q .name)
 # Change license
 gh repo license view mit | sed "s/\[year\]/$(date +%Y)/;s/\[fullname\]/mizdra/" > LICENSE
-npm pkg set license=MIT && npm i
+npm pkg set license=MIT && vp install
 # Setup labels
 GITHUB_TOKEN=$(gh auth token) npx \
   -p @azu/github-label-setup \
