@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  check:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
@@ -18,16 +18,9 @@ jobs:
         with:
           node-version: 24
           cache: true
-      - run: vp run check
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
-      - uses: voidzero-dev/setup-vp@250f29ce396baf5e8f24498e17c0dfdebabc26eb # v1.15.0
-        with:
-          node-version: 24
-          cache: true
-      - run: vp run build
+      - parallel:
+          - run: vp run check
+          - run: vp run build
   test:
     strategy:
       fail-fast: false
