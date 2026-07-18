@@ -12,3 +12,5 @@ This is a guide for contributors.
   ```
 - Approve a staged package on npmjs.com and publish it.
   - https://www.npmjs.com/settings/mizdra/staged-packages
+- Create a release on GitHub.
+  - https://github.com/mizdra/app_name/releases/new
