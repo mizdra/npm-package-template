@@ -1,16 +1,3 @@
-minimumReleaseAge: 4320
-minimumReleaseAgeExclude:
-  - '@mizdra/*'
-  - vite-plus
-  - '@voidzero-dev/*'
-  - oxlint
-  - '@oxlint/*'
-  - oxlint-tsgolint
-  - '@oxlint-tsgolint/*'
-  - oxfmt
-  - '@oxfmt/*'
-  - vitest
-  - '@vitest/*'
 catalog:
   vite: npm:@voidzero-dev/vite-plus-core@0.2.4
   vite-plus: 0.2.4
